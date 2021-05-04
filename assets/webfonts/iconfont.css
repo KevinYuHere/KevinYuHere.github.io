@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "font"; /* Project id 2524337 */
+  src: url('fa-iconfont.woff2') format('woff2'),
+       url('fa-iconfont.woff') format('woff'),
+       url('fa-iconfont.ttf') format('truetype');
+}
+
+.fa-github:before {
+  content: "\e7ab";
+}
+
+.fa-weibo:before {
+  content: "\e62d";
+}
+
+.fa-zhihu:before {
+  content: "\e87c";
+}
+
+.fa-youjian:before {
+  content: "\e614";
+}
+
+.fa-bilibili:before {
+  content: "\e75d";
+}
+
+.fa-google:before {
+  content: "\e775";
+}
+
