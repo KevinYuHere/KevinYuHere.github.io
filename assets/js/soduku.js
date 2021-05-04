@@ -38,7 +38,7 @@ SD.prototype={
 		var v = document.getElementById('2');
 		t.style.display = 'block';
 		v.style.display = 'none';
-		document.getElementById("ans").innerHTML="查看答案";
+		document.getElementById("ans").innerHTML="参考答案";
 	},
 	again:function(){
 		//清除已填
