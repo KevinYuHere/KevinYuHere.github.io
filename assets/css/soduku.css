@@ -21,20 +21,28 @@
                         width:9vmin;
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: column;
 		}
 		.sdspan1{
 			display: inline-block;
 			margin: 0;
-			height: 0;
-    padding-bottom: 11.11%;width:11.11%;
+			height: 9vmin;
+                        width:9vmin;
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: column;
 		}
 		.sdli{
 height:9vmin;width:81vmin;
 		}
 		.sdli1{
-height:11.11%;
+height:9vmin;width:81vmin;
 		}
 
 		.bl{
