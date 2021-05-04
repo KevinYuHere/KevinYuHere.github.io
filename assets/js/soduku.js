@@ -34,6 +34,11 @@ SD.prototype={
 		img.src = 'images/pic13.jpg';
 		var y=document.getElementById("notice");
 		y.innerHTML="开始你的数独游戏吧！注意：应使每一行、每一列、每一个粗线宫（3*3）内的数字均含1-9且不重复。";
+                var t = document.getElementById('1');
+		var v = document.getElementById('2');
+		t.style.display = 'block';
+		v.style.display = 'none';
+		document.getElementById("ans").innerHTML="查看答案";
 	},
 	again:function(){
 		//清除已填
