@@ -314,7 +314,6 @@ SD.prototype={
 			var y=document.getElementById("notice");
 			y.innerHTML="不会做了吗？先看着答案填几个再返回题目尝试吧！o((>ω< ))o";
 		}
-		document.getElementById("ans").innerHTML="返回作答";
 		String.prototype.times = String.prototype.times || function(n) { return (new Array(n+1)).join(this);}; 
 		for(var k=0;k<9;k++){
 			$(".sdli1:eq("+k+") .sdspan1").eq(2).addClass('br');
