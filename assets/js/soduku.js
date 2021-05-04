@@ -36,7 +36,7 @@ SD.prototype={
 		y.innerHTML="开始你的数独游戏吧！注意：应使每一行、每一列、每一个粗线宫（3*3）内的数字均含1-9且不重复。";
                 var t = document.getElementById('1');
 		var v = document.getElementById('2');
-		t.style.display = 'block';
+		t.style.display = 'inline-block';
 		v.style.display = 'none';
 		document.getElementById("ans").innerHTML="参考答案";
 	},
@@ -47,7 +47,7 @@ SD.prototype={
 		this.createBlankCells();
                 var t = document.getElementById('1');
 		var v = document.getElementById('2');
-		t.style.display = 'block';
+                t.style.display = 'inline-block';
 		v.style.display = 'none';
 		document.getElementById("ans").innerHTML="参考答案";
 	},
@@ -205,7 +205,7 @@ SD.prototype={
 		//检测用户输入结果。检测前将输入加入数组。检测单个的时候将这一个的值缓存起来并从数组中删除，检测结束在赋值回去。
                 var t = document.getElementById('1');
 		var v = document.getElementById('2');
-		t.style.display = 'block';
+		t.style.display = 'inline-block';
 		v.style.display = 'none';
 		document.getElementById("ans").innerHTML="参考答案";
 		var blankArr = this.blankArr,len = this.blankArr.length,x,y,dom,done,temp;
@@ -308,7 +308,7 @@ SD.prototype={
 		var t = document.getElementById('1');
 		var v = document.getElementById('2');
 		if(t.style.display === 'none'){
-			t.style.display = 'block';
+			t.style.display = 'inline-block';
 			v.style.display = 'none';
 			document.getElementById("ans").innerHTML="参考答案";
 			var img = document.getElementById('img1');
@@ -316,7 +316,7 @@ SD.prototype={
 			var y=document.getElementById("notice");
 			y.innerHTML="自己做才是最有意义的，相信你一定可以！ヾ(^▽^*)))";
 		}else{
-			v.style.display = 'block';
+			v.style.display = 'inline-block';
 			t.style.display = 'none';
 			document.getElementById("ans").innerHTML="返回作答";
 			var img = document.getElementById('img1');
