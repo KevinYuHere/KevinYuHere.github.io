@@ -232,7 +232,7 @@ SD.prototype={
 				var img = document.getElementById('img1');
 				img.src = 'images/pic12.jpg';
 				var y=document.getElementById("notice");
-				y.innerHTML="还有空白格，再看看吧！...(*￣０￣)ノ";
+				y.innerHTML="还有空白格，再检查一下吧！...(*￣０￣)ノ";
 			}
 			this.showErrors();
 		}
@@ -288,7 +288,7 @@ SD.prototype={
 			var img = document.getElementById('img1');
 			img.src = 'images/pic11.jpg';
 			var y=document.getElementById("notice");
-			y.innerHTML="有错误哦，检查一下吧！(＃°Д°)";
+			y.innerHTML="有错误哦，修改一下吧！(＃°Д°)";
 		}
 	},
 	createDoms:function(){
