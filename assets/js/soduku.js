@@ -13,7 +13,6 @@ SD.prototype={
 		var beginTime = new Date().getTime();
 		this.createSdArr();
 		console.log("数独生成完毕，耗时："+((new Date().getTime())-beginTime)/1000+"秒！");
-alert("数独生成完毕，耗时："+((new Date().getTime())-beginTime)/1000+"秒！");
 				this.blankNum = this.setLevel()||blankNum || this.blankNum;		
 		this.drawCells();
 		this.createBlank(this.blankNum);
