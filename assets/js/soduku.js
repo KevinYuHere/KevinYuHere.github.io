@@ -45,6 +45,11 @@ SD.prototype={
 		this.errorArr = [];
 		$(".sdspan").removeClass('bg_red blankCell');		
 		this.createBlankCells();
+                var t = document.getElementById('1');
+		var v = document.getElementById('2');
+		t.style.display = 'block';
+		v.style.display = 'none';
+		document.getElementById("ans").innerHTML="参考答案";
 	},
 	setLevel:function(){
 		//用户输入难度。
@@ -198,6 +203,11 @@ SD.prototype={
 	},
 	checkRes:function(){
 		//检测用户输入结果。检测前将输入加入数组。检测单个的时候将这一个的值缓存起来并从数组中删除，检测结束在赋值回去。
+                var t = document.getElementById('1');
+		var v = document.getElementById('2');
+		t.style.display = 'block';
+		v.style.display = 'none';
+		document.getElementById("ans").innerHTML="参考答案";
 		var blankArr = this.blankArr,len = this.blankArr.length,x,y,dom,done,temp;
 		this.getInputVals();
 		this.errorArr.length = 0;
@@ -300,7 +310,7 @@ SD.prototype={
 		if(t.style.display === 'none'){
 			t.style.display = 'block';
 			v.style.display = 'none';
-			document.getElementById("ans").innerHTML="查看答案";
+			document.getElementById("ans").innerHTML="参考答案";
 			var img = document.getElementById('img1');
 			img.src = 'images/pic13.jpg';
 			var y=document.getElementById("notice");
