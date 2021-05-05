@@ -54,7 +54,8 @@ SD.prototype={
 	setLevel:function(){
 		//用户输入难度。
 		loop1:for(let i = 0; i < 1; i++){
-			var num = prompt("请输入你期望的数独难度。你填入的数字将作为数独中空白格的个数（应为整数，且在15到64之间）："); 
+                        var ran = Math.floor((Math.random()*50)+15);
+			var num = prompt("请输入你期望的数独难度。你填入的数字将作为数独中空白格的个数（应为整数，且在15到64之间）：",ran); 
 			if(/^\d+$/.test(num)) {
 				num = parseInt(num);
 				if (num>64 || num<15){
