@@ -23,10 +23,7 @@
                         width:9vmin;
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        flex-direction: column;
+                        line-height: 9vmin;
 		}
 		.sdspan1{
 			display: inline-block;
@@ -35,10 +32,7 @@
                         width:9vmin;
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        flex-direction: column;
+                        line-height: 9vmin;
 		}
 		.sdli{
 height:9vmin;width:81vmin;
