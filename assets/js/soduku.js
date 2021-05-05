@@ -384,8 +384,4 @@ function　opened(){
 	b = $("#but").height();
 	var heightabled = height - x - b - height*0.2;
 	var n = Math.min( heightabled,width );
-	document.getElementById("chess").style.height=n*0.9+"px";
-	document.getElementById("chess").style.width=n*0.9+"px";
-	document.getElementById("chessanswer").style.height=n*0.9+"px";
-	document.getElementById("chessanswer").style.width=n*0.9+"px";
 }
