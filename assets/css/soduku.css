@@ -24,6 +24,7 @@
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
                         line-height: 9vmin;
+font-weight:bold;font-size:90%;
 		}
 		.sdspan1{
 			display: inline-block;
@@ -33,6 +34,7 @@
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
                         line-height: 9vmin;
+font-weight:bold;font-size:90%;
 		}
 		.sdli{
 height:9vmin;width:81vmin;
