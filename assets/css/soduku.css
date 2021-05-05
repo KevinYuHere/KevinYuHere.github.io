@@ -24,7 +24,8 @@
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
                         line-height: 9vmin;
-font-weight:bold;font-size:90%;
+                        font-weight: bold;
+                        font-size: 90%;
 		}
 		.sdspan1{
 			display: inline-block;
@@ -34,7 +35,8 @@ font-weight:bold;font-size:90%;
 			border: 1px dotted #FFFFFF;;
 			text-align: center;
                         line-height: 9vmin;
-font-weight:bold;font-size:90%;
+                        font-weight: bold;
+                        font-size: 90%;
 		}
 		.sdli{
 height:9vmin;width:81vmin;
@@ -63,7 +65,7 @@ height:9vmin;width:81vmin;
 		}
 		.blankCell{
 			color:#b8f1ed ;
-			font-weight: 600;
+			font-weight: bold;
 		}
 		.bg_red{
 			background:#c17e61;
