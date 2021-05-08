@@ -50,6 +50,10 @@ SD.prototype={
                 t.style.display = 'inline-block';
 		v.style.display = 'none';
 		document.getElementById("ans").innerHTML="参考答案";
+		var img = document.getElementById('img1');
+		img.src = 'images/pic13.jpg';
+		var y=document.getElementById("notice");
+		y.innerHTML="自己做才是最有意义的，相信你一定可以！ヾ(^▽^*)))";
 	},
 	setLevel:function(){
 		//用户输入难度。
