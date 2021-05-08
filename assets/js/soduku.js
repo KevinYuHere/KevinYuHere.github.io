@@ -205,6 +205,13 @@ SD.prototype={
 				$(this).html('');
 			};
 		});
+                $(".sdspan[contenteditable=true]").paste(function(event) {
+			var val = $(this).html();			
+			var reStr = /^[1-9]{1}$/;
+			if(!reStr.test(val)){
+				$(this).html('');
+			};
+		});
 	},
 	checkRes:function(){
 		//检测用户输入结果。检测前将输入加入数组。检测单个的时候将这一个的值缓存起来并从数组中删除，检测结束在赋值回去。
@@ -297,16 +304,7 @@ SD.prototype={
 		}
 	},
 	createDoms:function(){
-		//生成九宫格。
-		String.prototype.times = String.prototype.times || function(n) { return (new Array(n+1)).join(this);}; 
-		for(var k=0;k<9;k++){
-			$(".sdli:eq("+k+") .sdspan").eq(2).addClass('br');
-			$(".sdli:eq("+k+") .sdspan").eq(5).addClass('br');
-			$(".sdli:eq("+k+") .sdspan").eq(3).addClass('bl');
-			$(".sdli:eq("+k+") .sdspan").eq(6).addClass('bl');
-		}
-		$(".sdli:eq(2) .sdspan,.sdli:eq(5) .sdspan").addClass('bb');
-		$(".sdli:eq(3) .sdspan,.sdli:eq(6) .sdspan").addClass('bt');
+		alert("数独已生成。");
 	},
 	answer:function(){
 		//生成答案。
@@ -329,15 +327,6 @@ SD.prototype={
 			var y=document.getElementById("notice");
 			y.innerHTML="不会做了吗？先看着答案填几个再返回题目尝试吧！o((>ω< ))o";
 		}
-		String.prototype.times = String.prototype.times || function(n) { return (new Array(n+1)).join(this);}; 
-		for(var k=0;k<9;k++){
-			$(".sdli1:eq("+k+") .sdspan1").eq(2).addClass('br');
-			$(".sdli1:eq("+k+") .sdspan1").eq(5).addClass('br');
-			$(".sdli1:eq("+k+") .sdspan1").eq(3).addClass('bl');
-			$(".sdli1:eq("+k+") .sdspan1").eq(6).addClass('bl');
-		}
-		$(".sdli1:eq(2) .sdspan1,.sdli1:eq(5) .sdspan1").addClass('bb');
-		$(".sdli1:eq(3) .sdspan1,.sdli1:eq(6) .sdspan1").addClass('bt');
 		for(var j =1;j<=9;j++){
 			for(var i =1;i<=9;i++){					
 				$(".sdli1").eq(j-1).find(".sdspan1").eq(i-1).html(this.sdArr[parseInt(i+''+j)]);
