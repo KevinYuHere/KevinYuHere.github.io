@@ -1,4 +1,3 @@
-
 function SD(){
 	this.sdArr = [];//生成的数独数组	
 	this.errorArr = [];//错误的格子。
@@ -196,13 +195,22 @@ SD.prototype={
 			dom = $(".sdli").eq(y-1).find(".sdspan").eq(x-1);
 			dom.attr('contenteditable', true).html('').addClass('blankCell');		
 			this.backupSdArr[blankArr[i]] = undefined;
-	        }
-                $(".blankCell").on('input propertychange', function() {
-                        var val = $(this).html();			
+		}
+
+		$(".sdspan[contenteditable=true]").keyup(function(event) {
+			var val = $(this).html();			
 			var reStr = /^[1-9]{1}$/;
 			if(!reStr.test(val)){
 				$(this).html('');
-                });
+			};
+		});
+                $(".sdspan[contenteditable=true]").paste(function(event) {
+			var val = $(this).html();			
+			var reStr = /^[1-9]{1}$/;
+			if(!reStr.test(val)){
+				$(this).html('');
+			};
+		});
 	},
 	checkRes:function(){
 		//检测用户输入结果。检测前将输入加入数组。检测单个的时候将这一个的值缓存起来并从数组中删除，检测结束在赋值回去。
@@ -365,8 +373,4 @@ function　opened(){
 	a = $("#int").height();
 	document.getElementById("replace").style.height=(a+height*0.1)+"px";
 	document.getElementById("replace").style.width=width+"px";
-	x = $("#replace").height();
-	b = $("#but").height();
-	var heightabled = height - x - b - height*0.2;
-	var n = Math.min( heightabled,width );
 }
