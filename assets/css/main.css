@@ -2862,7 +2862,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: #b8f1ed;
+			background-color: #F8F8FF;
 		}
 
 		input[type="submit"].icon:before,
