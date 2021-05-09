@@ -197,7 +197,7 @@ SD.prototype={
 			this.backupSdArr[blankArr[i]] = undefined;
 		}
 
-		$(".sdspan[contenteditable=true]").input(function(event) {
+		$(".sdspan[contenteditable=true]").keyup(function(event) {
 			var val = $(this).html();			
 			var reStr = /^[1-9]{1}$/;
 			if(!reStr.test(val)){
