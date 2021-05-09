@@ -367,3 +367,32 @@ function　opened(){
 	document.getElementById("replace").style.height=(a+height*0.1)+"px";
 	document.getElementById("replace").style.width=width+"px";
 }
+//屏蔽右键菜单  
+document.oncontextmenu = function (event){  
+    if(window.event){  
+        event = window.event;  
+    }try{  
+        var the = event.srcElement;  
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){  
+            return false;  
+        }  
+        return true;  
+    }catch (e){  
+        return false;  
+    }  
+}  
+
+//屏蔽粘贴  
+document.onpaste = function (event){  
+    if(window.event){  
+        event = window.event;  
+    }try{  
+        var the = event.srcElement;  
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){  
+            return false;  
+        }  
+        return true;  
+    }catch (e){  
+        return false;  
+    }  
+}
