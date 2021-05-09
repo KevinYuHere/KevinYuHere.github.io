@@ -11,6 +11,21 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body style="color:#FFFFFF;text-align:center;" οncοntextmenu=self.event.returnValue=false>
+	<script type = "text/javascript">
+		function check(){
+			var val = $(".sdspan[contenteditable=true]").html();			
+			var reStr = /^[1-9]{1}$/;
+			if(!reStr.test(val)){
+				$(".sdspan[contenteditable=true]").html('');
+			};
+		}
+        	window.onload = function()
+        	{
+           		alert("hello");
+			var time;
+			time = setInterval(check,100);
+      		}
+    	</script>
 				<header id="header">
 					<h1 id="logo"><a href="index.html">Kevin Yu</a></h1>
 				</header>
