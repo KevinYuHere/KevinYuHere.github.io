@@ -1,3 +1,11 @@
+                *{
+                        -webkit-touch-callout:none; /*系统默认菜单被禁用*/
+                        -webkit-user-select:none; /*webkit浏览器*/
+                        -khtml-user-select:none; /*早期浏览器*/
+                        -moz-user-select:none;/*火狐*/
+                        -ms-user-select:none; /*IE10*/
+                        user-select:none;
+                }
 		ul,li{
 			list-style: none;	
 			margin: 0;
@@ -39,10 +47,10 @@
                         font-size: 7.5vmin;
 		}
 		.sdli{
-height:9vmin;width:81vmin;
+                        height:9vmin;width:81vmin;
 		}
 		.sdli1{
-height:9vmin;width:81vmin;
+                        height:9vmin;width:81vmin;
 		}
 
 		.bl{
@@ -67,6 +75,7 @@ height:9vmin;width:81vmin;
 			color:#b8f1ed ;
 			font-weight: bold;
                         contentEditable="true";
+                        -webkit-user-select:auto; /*webkit浏览器*/
 		}
 		.bg_red{
 			background:#c17e61;
