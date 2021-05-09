@@ -296,7 +296,7 @@ SD.prototype={
 		}
 	},
 	createDoms:function(){
-		alert("数独已生成。");
+		return;
 	},
 	answer:function(){
 		//生成答案。
