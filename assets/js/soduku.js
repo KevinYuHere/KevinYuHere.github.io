@@ -396,11 +396,4 @@ document.onpaste = function (event){
         return false;  
     }  
 }
-var int1=self.setInterval("time()",100);
-function time()
-{
-	var val = $(".sdspan[contentEditable=true]").html();			
-	var reStr = /^[1-9]{1}$/;
-	if(!reStr.test(val)){
-	$(this).html('');
-}
+
