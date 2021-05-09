@@ -193,11 +193,11 @@ SD.prototype={
 			x = parseInt(blankArr[i]/10);
 			y = blankArr[i]%10;	
 			dom = $(".sdli").eq(y-1).find(".sdspan").eq(x-1);
-			dom.attr('contentEditable', true).html('').addClass('blankCell');		
+			dom.attr('contenteditable', true).html('').addClass('blankCell');		
 			this.backupSdArr[blankArr[i]] = undefined;
 		}
 
-		$(".sdspan[contentEditable=true]").keyup(function(event) {
+		$(".sdspan[contenteditable=true]").keyup(function(event) {
 			var val = $(this).html();			
 			var reStr = /^[1-9]{1}$/;
 			if(!reStr.test(val)){
@@ -396,4 +396,3 @@ document.onpaste = function (event){
         return false;  
     }  
 }
-
