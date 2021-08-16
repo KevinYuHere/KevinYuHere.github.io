@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>游凯风</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app">正在加载中，请稍候......</div>
+  <script>
+  window.$docsify = {
+    search: {
+      paths: [
+	'/gate',
+	'/class/law',
+	'/class/rule',
+	'/class/intro',
+	'/class/notice',
+      ],
+      placeholder: '(｡･∀･)ﾉﾞ嗨，尝试搜索一下吧',
+      noData: '啊哦，没有找到指定内容＞︿＜',
+      // 搜索标题的最大层级, 1 - 6
+      depth: 6,
+      hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+    },
+    coverpage: true,
+onlyCover: true,
+loadSidebar: true,
+executeScript: true,
+subMaxLevel: 6,
+themeColor: '#33a3dc',
+topMargin: 40,
+plugins: [
+    function(hook) {
+      var footer = [
+        '<hr/>',
+        '<footer>',
+        '<span style="line-height:180%">版权所有&nbsp;&nbsp;&copy;&nbsp;&nbsp;<a href="mailto: kevinyuhere@foxmail.com" target="_blank">游凯风</a></span>',
+	'<br><span style="line-height:180%">特别鸣谢&nbsp;&nbsp;<a href="https://docsify.js.org/#/" target="_blank">Docsify</a>&nbsp;&nbsp;<a href="https://github.com/" target="_blank">Github</a></span>',
+        '</footer>'
+      ].join('');
+var header = [
+        '<div   style="width:100%;height:100%;z-index:9999;position:absolute;background-color:white;display: none;" id="lock"></div>',
+      ].join('');
+      hook.afterEach(function(html) {
+document.getElementById("main").style.display="";
+        return header + html + footer;
+      });
+    }
+  ],
+  }
+</script>
+<script>
+function locker(password){
+document.getElementById("main").style.display="none";
+    while(1){
+        var pass = prompt("这是敏感文档，请输入密码获得权限，或者输入0以放弃查看：", "0");
+        if(pass=="0")
+        {
+            break;
+        }
+        if(pass=="Kevin Yu "+password)
+        {
+            document.getElementById("main").style.display="";
+            break;
+        }
+    }
+}
+</script>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
